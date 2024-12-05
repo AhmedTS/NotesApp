@@ -85,7 +85,8 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
 					<image>
-						<name>notesapp:${maven.build.timestamp}</name>
+						<imagePlatform>linux/arm64/v8</imagePlatform>
+						<builder>paketobuildpacks/builder-jammy-java-tiny:latest</builder>
 						<createdDate>now</createdDate>
 					</image>
 				</configuration>
