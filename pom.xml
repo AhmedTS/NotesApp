@@ -86,7 +86,6 @@
 				<configuration>
 					<image>
 						<imagePlatform>linux/arm64/v8</imagePlatform>
-						<builder>paketobuildpacks/builder-jammy-java-tiny:latest</builder>
 						<createdDate>now</createdDate>
 					</image>
 				</configuration>
