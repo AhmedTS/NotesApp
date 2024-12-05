@@ -43,11 +43,4 @@ public abstract class TestContainersBase {
         Note note5 = new Note("Note 5", LocalDate.of(2024, 10, 10), "Test note with all tags", List.of(Tags.IMPORTANT, Tags.BUSINESS, Tags.PERSONAL));
         return List.of(note1, note2, note3, note4, note5);
     }
-
-//    @Override
-//    public void beforeAll(ExtensionContext context) throws Exception {
-//        //mongoDBContainer = ;
-//        mongoDBContainer.start();
-//        setProperties(mongoDBContainer);
-//    }
 }

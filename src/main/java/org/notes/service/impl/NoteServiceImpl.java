@@ -1,16 +1,17 @@
 package org.notes.service.impl;
 
-import org.notes.exception.exceptions.NoteNotFoundException;
 import org.notes.model.Note;
 import org.notes.model.web.WebNote;
 import org.notes.repository.NotesRepository;
 import org.notes.service.NoteService;
 import org.notes.util.Helper;
-import org.notes.validation.ValidObjectId;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.*;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Optional;
 
 @Service
 public class NoteServiceImpl implements NoteService {

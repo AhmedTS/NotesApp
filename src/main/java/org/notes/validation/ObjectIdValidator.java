@@ -11,7 +11,6 @@ public class ObjectIdValidator implements ConstraintValidator<ValidObjectId, Str
         if (value == null || value.isEmpty()) {
             return false; // Let @NotNull handle null checks if required
         }
-
         // Validate if the string is a valid MongoDB ObjectId
         return ObjectId.isValid(value);
     }

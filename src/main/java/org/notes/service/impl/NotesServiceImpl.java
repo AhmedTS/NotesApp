@@ -1,6 +1,5 @@
 package org.notes.service.impl;
 
-import jakarta.validation.Valid;
 import org.notes.model.Note;
 import org.notes.model.Tags;
 import org.notes.model.web.SimplifiedWebNote;
@@ -13,7 +12,6 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
-import org.springframework.validation.annotation.Validated;
 
 import java.time.LocalDate;
 import java.util.List;

@@ -7,7 +7,6 @@ import org.notes.model.web.SimplifiedWebNote;
 import org.notes.model.web.WebNote;
 import org.notes.service.NotesService;
 import org.springframework.beans.factory.annotation.Autowired;
-
 import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;

@@ -36,7 +36,7 @@ public class Helper {
     public static <K, V extends Comparable<? super V>>  Map<K, V> sortMapByValue(Map<K, V> map){
         List<Map.Entry<K, V>> list = new ArrayList<>(map.entrySet());
         list.sort(Collections.reverseOrder(Map.Entry.comparingByValue())); //Sort on value in descending order
-        LinkedHashMap<K, V> linkedHashMap = new LinkedHashMap<K, V>(); //maintains order
+        LinkedHashMap<K, V> linkedHashMap = new LinkedHashMap<>(); //maintains order
         for(Map.Entry<K,V> entry: list){
             linkedHashMap.put(entry.getKey(), entry.getValue());
         }
@@ -70,14 +70,9 @@ public class Helper {
     }
 
     //Mapper from Note to SimplifiedWebNote
-    public static SimplifiedWebNote mapNoteToSimplifiedWebNote(Note note){
+    public static SimplifiedWebNote mapNoteToSimplifiedWebNote(Note note) {
         return new SimplifiedWebNote(note.getId(),
-                                     note.getTitle(),
-                                     note.getCreatedDate());
+                note.getTitle(),
+                note.getCreatedDate());
     }
-
-//    public boolean compareList(List<Object> list1, List<Object> list2){
-//        if(list1.size()!=list2.size())
-//            return false;
-//    }
 }

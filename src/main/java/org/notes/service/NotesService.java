@@ -8,7 +8,6 @@ import org.notes.model.web.WebNote;
 import org.springframework.data.domain.Page;
 import org.springframework.validation.annotation.Validated;
 
-
 import java.util.List;
 
 @Validated
