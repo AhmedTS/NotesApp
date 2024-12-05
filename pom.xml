@@ -87,7 +87,6 @@
 					<image>
 						<name>notesapp:${maven.build.timestamp}</name>
 						<imagePlatform>linux/arm64/v8</imagePlatform>
-						<createdDate>now</createdDate>
 					</image>
 				</configuration>
 			</plugin>
