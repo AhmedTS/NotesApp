@@ -62,17 +62,17 @@ jobs:
           
       # Step 7: Compose docker image with Spring boot, mongodb and mongoexpress
       - name: Build docker image
-        run: docker compose build
+        run: docker compose -f docker-compose.yaml build
         
       # Step 8: Push to Container Registry
       - name: Push image to Container Registry
         id: push
-        run: docker compose push
+        run: docker compose -f docker-compose.yaml push
 
       # Step 9: This step generates an artifact attestation for the image, which is an unforgeable statement about where and how it was built. It increases supply chain security for people who consume the image. For more information, see "[AUTOTITLE](/actions/security-guides/using-artifact-attestations-to-establish-provenance-for-builds)." 
-      - name: Generate artifact attestation
-        uses: actions/attest-build-provenance@v1
-        with:
-          subject-name: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME}}
-          subject-digest: ${{ steps.push.outputs.digest }}
-          push-to-registry: true
+      # - name: Generate artifact attestation
+      #   uses: actions/attest-build-provenance@v1
+      #   with:
+      #     subject-name: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME}}
+      #     subject-digest: ${{ steps.push.outputs.digest }}
+      #     push-to-registry: true
