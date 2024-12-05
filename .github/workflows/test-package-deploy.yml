@@ -25,6 +25,6 @@ jobs:
     - run: echo hello > target/notes-app.jar
     - uses: actions/upload-artifact@v4
       with:
-       name: notes-app-file
+       name: notes-app
        path: target/
 
