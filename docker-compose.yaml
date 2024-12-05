@@ -5,6 +5,7 @@ services:
             dockerfile: Dockerfile
         container_name: spring-boot-app
         restart: always
+        platform: linux/arm64/v8
         ports:
             - "8080:8080"
         depends_on:
@@ -13,6 +14,7 @@ services:
         image: mongo
         container_name: notes-mongodb
         restart: always
+        platform: linux/arm64/v8
         ports: 
             - 27017:27017
         volumes: 
@@ -24,6 +26,7 @@ services:
         image: mongo-express
         container_name: notes-mongo-express
         restart: always
+        platform: linux/arm64/v8
         ports:
             - 8081:8081
         environment:
