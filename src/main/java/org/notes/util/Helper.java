@@ -18,7 +18,8 @@ public class Helper {
      * @return list of words in sentence
      */
     public static List<String> splitStringIntoWords(String sentence){
-        Pattern pattern = Pattern.compile("\\w+"); //matches alphanumeric characters and numbers
+        String regex = "[a-zA-Z]+(?:[-'][a-zA-Z]+)*+"; //matches words that can contain hyphens or apostrophes
+        Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(sentence);
         List<String> words = new ArrayList<>();
         while(matcher.find()) {
