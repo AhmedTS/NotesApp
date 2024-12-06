@@ -36,10 +36,11 @@ public class NotesServiceImpl implements NotesService {
         Sort sortByNewest = Sort.by("createdDate").descending();
         Pageable pageable = PageRequest.of(page, size, sortByNewest);
         if(filter){
-            if(tags.isEmpty()){
+            if(tags.isEmpty()){ //match all empty tags
                 return notesRepository.findNotesByTags(tags, pageable)
                         .map(Helper::mapNoteToSimplifiedWebNote);
             }
+            //match notes containing all tags
             return notesRepository.findNotesByTagsContainingAll(tags, pageable)
                     .map(Helper::mapNoteToSimplifiedWebNote);
         }

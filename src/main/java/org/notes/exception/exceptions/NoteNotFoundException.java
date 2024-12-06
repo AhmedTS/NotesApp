@@ -1,5 +1,6 @@
 package org.notes.exception.exceptions;
 
+//Exception class to handle cases where noteId parameter doesn't exist in database
 public class NoteNotFoundException extends RuntimeException{
     String noteId;
     public NoteNotFoundException(String noteId){

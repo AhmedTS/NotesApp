@@ -53,6 +53,7 @@ public class NoteController {
        return ResponseEntity.noContent().build();
     }
 
+    //Update Note
     @PutMapping("")
     @ResponseBody
     public ResponseEntity<WebNote> updateNote(@ValidObjectId @PathVariable String noteId, @Valid @RequestBody WebNote note){
@@ -63,6 +64,7 @@ public class NoteController {
         return ResponseEntity.ok(updatedNode.get());
     }
 
+    //Get Node Stats
     @GetMapping("/stats")
     @ResponseBody
     public ResponseEntity<Map<String, Integer>> getNoteStats(@ValidObjectId @PathVariable String noteId){
